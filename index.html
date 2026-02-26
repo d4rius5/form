@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Most Likely To Form</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#1e1e2f;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    width:700px;
+    margin:auto;
+    background:#2a2a40;
+    padding:20px;
+    border-radius:10px;
+}
+
+.question{
+    margin:15px 0;
+    text-align:left;
+}
+
+select,input,button{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    border-radius:6px;
+    border:none;
+}
+
+button{
+    background:#5865F2;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Who's Most Likely</h1>
+
+<input id="username" placeholder="Your Name">
+
+<div id="questions"></div>
+
+<button onclick="submitForm()">Submit</button>
+</div>
+
+<script>
+
+// ⭐ PUT YOUR WEBHOOK HERE
+const webhookURL = "https://discord.com/api/webhooks/1476720669751513351/vvFt6N3adRHqlpIs_UPFyqUTzX_YQNAhz68wJBOD2B96o5mtlVQoTcWrC7YHgSmP5IoO";
+
+const options = [
+"annika",
+"darius",
+"danny",
+"rose",
+"sav",
+"luca",
+"dan",
+"koma",
+"xuel"
+];
+
+// ALL QUESTIONS
+const questions = `Who is most likely to compete on a reality dating show?
+Who is most likely to show up late with Starbucks in hand?
+Who is most likely to direct a music video that blows up on YouTube?
+Who is most likely to survive to the end of a horror film?
+Who is most likely to adopt way too many pets at once?
+Who is most likely to run for office just to prove a point?
+Who is most likely to win a dance battle?
+Who is most likely to launch their own skincare line?
+Who is most likely to roast everyone in the group with scary accuracy?
+Who is most likely to bring up astrology to explain literally everything?
+Who is most likely to become a celebrity’s personal stylist?
+Who is most likely to respond to a text message three weeks later?
+Who is most likely to live abroad?
+Who is most likely to compete on Survivor (and actually win)?
+Who is most likely to turn their life into a reality TV show?
+Who is most likely to give the best advice?
+Who is most likely to write fanfic that secretly blows up online?
+Who is most likely to go viral for a hot take?
+Who is most likely to start a business?
+Who is most likely to win a costume contest with zero prep time?
+Who is most likely to have their own Netflix stand-up special?
+Who is most likely to survive a zombie apocalypse?
+Who is most likely to make friends with a stranger in the bathroom line?
+Who is most likely to say “I’m broke” but still show up with a $7 latte?
+Who is most likely to remain calm during a big storm?`
+.split("\n");
+
+// CREATE QUESTIONS
+const container = document.getElementById("questions");
+
+questions.forEach((q,index)=>{
+
+let div = document.createElement("div");
+div.className="question";
+
+let label = document.createElement("label");
+label.innerText = `${index+1}. ${q}`;
+
+let select = document.createElement("select");
+select.id=`q${index}`;
+
+options.forEach(opt=>{
+let o=document.createElement("option");
+o.value=opt;
+o.textContent=opt;
+select.appendChild(o);
+});
+
+div.appendChild(label);
+div.appendChild(select);
+container.appendChild(div);
+
+});
+
+async function submitForm(){
+
+const name=document.getElementById("username").value;
+
+if(!name){
+alert("Enter your name!");
+return;
+}
+
+let result=`📋 New Submission\n\n👤 Name: ${name}\n\n`;
+
+questions.forEach((q,index)=>{
+let answer=document.getElementById(`q${index}`).value;
+result+=`Q${index+1}: ${answer}\n`;
+});
+
+await fetch(webhookURL,{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({content:result})
+});
+
+alert("Submitted!");
+}
+
+</script>
+
+</body>
+</html>
