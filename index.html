@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Most Likely To Form</title>
+<title>Who's Most Likely</title>
 
 <style>
 body{
@@ -55,22 +55,15 @@ button{
 
 <script>
 
-// ⭐ PUT YOUR WEBHOOK HERE
-const webhookURL = "https://discord.com/api/webhooks/1476720669751513351/vvFt6N3adRHqlpIs_UPFyqUTzX_YQNAhz68wJBOD2B96o5mtlVQoTcWrC7YHgSmP5IoO";
+// ⭐ REPLACE WITH NEW WEBHOOK
+const webhookURL = "PASTE_NEW_WEBHOOK_HERE";
 
 const options = [
-"annika",
-"darius",
-"danny",
-"rose",
-"sav",
-"luca",
-"dan",
-"koma",
-"xuel"
+"annika","darius","danny","rose",
+"sav","luca","dan","koma","xuel"
 ];
 
-// ALL QUESTIONS
+// ✅ PUT ALL QUESTIONS HERE
 const questions = `Who is most likely to compete on a reality dating show?
 Who is most likely to show up late with Starbucks in hand?
 Who is most likely to direct a music video that blows up on YouTube?
@@ -95,21 +88,131 @@ Who is most likely to have their own Netflix stand-up special?
 Who is most likely to survive a zombie apocalypse?
 Who is most likely to make friends with a stranger in the bathroom line?
 Who is most likely to say “I’m broke” but still show up with a $7 latte?
-Who is most likely to remain calm during a big storm?`
+Who is most likely to remain calm during a big storm?
+Who is most likely to win a Nobel Peace Prize?
+Who is most likely to become a wedding officiant?
+Who is most likely to drop everything to help a stranger?
+Who is most likely to have a crush on three people at the same time?
+Who is most likely to break their phone screen within a week of getting it?
+Who is most likely to leave without saying goodbye?
+Who is most likely to order food, take two bites, and be “so full”?
+Who is most likely to teach you something new?
+Who is most likely to win at trivia?
+Who is most likely to become a professor?
+Who is most likely to have their phone at 2%… always?
+Who is most likely to fall for an obvious scam?
+Who is most likely to host a podcast?
+Who is most likely to give the best hug?
+Who is most likely to turn a game night into a full-on competition?
+Who is most likely to hand write a letter?
+Who is most likely to write a book?
+Who is most likely to start drama and then say, “I hate drama”?
+Who is most likely to plan the entire group vacation?
+Who is most likely to overshare online?
+Who is most likely to start a band just for the aesthetic?
+Who is most likely to open a store that only sells oddly specific things?
+Who is most likely to run a fan club for their favorite celebrity?
+Who is most likely to get their catchphrase turned into a viral TikTok sound?
+Who is most likely to get hired as a professional hype person?
+Who is most likely to post a gushy anniversary caption?
+Who is most likely to buy matching pajama sets?
+Who is most likely to forget where they parked the car?
+Who is most likely to binge an entire series without waiting for their partner?
+Who is most likely to show up in a new country without any of the currency?
+Who is most likely to plan the coolest dates?
+Who is most likely to adopt multiple pets without warning?
+Who is most likely to retell a story over and over?
+Who is most likely to cry during a rom-com?
+Who is most likely to accidentally spoil a surprise?
+Who is most likely to get hangry first?
+Who is most likely to suggest moving abroad together?
+Who is most likely to write a love song?
+Who is most likely to decorate the house for every holiday?
+Who is most likely to eat off of someone else's plate?
+Who is most likely to forget what they argued about five minutes later?
+Who is most likely to dress their pet up?
+Who is most likely to get weirdly competitive over mini golf?
+Who is most likely to get stage-five obsessed with a new hobby?
+Who is most likely to avoid conflict?
+Who is most likely to take “just a bite” and eat half your food?
+Who is most likely to try to DIY home repairs and make it worse?
+Who is most likely to fall asleep first?
+Who is most likely to volunteer the two of you for something without asking first?
+Who is most likely to climb a mountain?
+Who is most likely to take the middle seat on an airplane?
+Who is most likely to go skydiving?
+Who is most likely to drive on long road trips?
+Who is most likely to pick a fight over thermostat settings?
+Who is most likely to make friends with strangers on vacation?
+Who is most likely to talk about starting a business together?
+Who is most likely to get lost driving — even with GPS on?
+Who is most likely to want a big, elaborate family holiday celebration?
+Who is most likely to win an argument by making the other laugh?
+Who is most likely to get FOMO and drag you to three events in one night?
+Who is most likely to organize the couple’s calendar so you don’t double-book?
+Who is most likely to talk through an entire movie?
+Who is most likely to retell your “first date” story differently every time?
+Who is most likely to befriend your Uber driver?
+Who is most likely to turn a quick errand into an all-day outing?
+Who is most likely to run out of gas because they “thought it would last”?
+Who is most likely to try a TikTok recipe and set off the smoke alarm?
+Who is most likely to plan your couple Halloween costumes a year in advance?
+Who is most likely to snooze their alarm five times in a row?
+Who is most likely to stay calm during an emergency?
+Who is most likely to marry someone rich and famous?
+Who is most likely to flirt their way out of trouble?
+Who is most likely to go skinny dipping?
+Who is most likely to date more than one person at a time?
+Who is most likely to kiss and tell?
+Who is most likely to sneak into a concert or event without a ticket?
+Who is most likely to pee in the shower?
+Who is most likely to get arrested?
+Who is most likely to die first in a horror film?
+Who is most likely to expose receipts during an argument?
+Who is most likely to kiss someone at a party just for attention?
+Who is most likely to be on the news for being involved with a scam?
+Who is most likely to go a week without a shower?
+Who is most likely to go through someone’s phone without permission?
+Who is most likely to end up in a news headline?
+Who is most likely to hook up with their ex again?
+Who is most likely to tattle on someone?
+Who is most likely to never change their sheets?
+Who is most likely to send their food back at a restaurant?
+Who is most likely to fall in love with their best friend?
+Who is most likely to get into a love triangle?
+Who is most likely to go on a date just for free food?
+Who is most likely to end up dating someone way older?
+Who is most likely to lead someone on just for the attention?
+Who is most likely to start dating someone new a week after a breakup?
+Who is most likely to quit a job on the spot after one bad day?
+Who is most likely to stir up drama at a family holiday dinner?
+Who is most likely to drop a “you won’t believe what I heard” the second they walk in the room?
+Who is most likely to fake being sick to get out of plans?
+Who is most likely to say “I’m over it” and then bring it up again a week late
+Who is most likely to block someone with little provocation?
+Who is most likely to keep a secret until it’s convenient to spill?
+Who is most likely to post a breakup TikTok within 24 hours?
+Who is most likely to pretend they didn’t see a message but actually did?
+Who is most likely to screenshot a conversation “just in case”?
+Who is most likely to post a cryptic message and refuse to explain it?
+Who is most likely to take karaoke way too seriously?
+Who is most likely to pull a dramatic stunt just because they’re bored?
+Who is most likely to take the longest getting ready and still be late?
+Who is most likely to start dating someone just to make someone else jealous?`
 .split("\n");
 
-// CREATE QUESTIONS
+// CREATE FORM
 const container = document.getElementById("questions");
 
 questions.forEach((q,index)=>{
 
-let div = document.createElement("div");
+let div=document.createElement("div");
 div.className="question";
 
-let label = document.createElement("label");
-label.innerText = `${index+1}. ${q}`;
+let label=document.createElement("label");
+label.innerText=`${index+1}. ${q}`;
 
-let select = document.createElement("select");
+let select=document.createElement("select");
 select.id=`q${index}`;
 
 options.forEach(opt=>{
@@ -125,6 +228,7 @@ container.appendChild(div);
 
 });
 
+// ✅ SEND TO DISCORD (SAFE FOR MANY QUESTIONS)
 async function submitForm(){
 
 const name=document.getElementById("username").value;
@@ -134,20 +238,47 @@ alert("Enter your name!");
 return;
 }
 
-let result=`📋 New Submission\n\n👤 Name: ${name}\n\n`;
+let lines=[];
 
 questions.forEach((q,index)=>{
 let answer=document.getElementById(`q${index}`).value;
-result+=`Q${index+1}: ${answer}\n`;
+
+lines.push(
+`${index+1}. ${q}\n➡️ ${answer}`
+);
 });
+
+// Discord has 2000 char limit → split messages
+function chunkText(arr,limit=1800){
+let chunks=[];
+let current="";
+
+arr.forEach(line=>{
+if((current+line).length>limit){
+chunks.push(current);
+current="";
+}
+current+=line+"\n\n";
+});
+chunks.push(current);
+return chunks;
+}
+
+let messages=chunkText(lines);
+
+for(const msg of messages){
 
 await fetch(webhookURL,{
 method:"POST",
 headers:{"Content-Type":"application/json"},
-body:JSON.stringify({content:result})
+body:JSON.stringify({
+content:`📋 New Submission\n👤 ${name}\n\n${msg}`
+})
 });
 
-alert("Submitted!");
+}
+
+alert("Submitted successfully!");
 }
 
 </script>
